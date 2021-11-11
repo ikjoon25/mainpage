@@ -1,0 +1,139 @@
+@charset "utf-8";
+*{margin:0; padding:0;}
+.container{width:1200px; height:969px; margin:0 auto; }
+#wrap{width:100%; height:100%;}
+/* .hoverbox {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100%;height:504px;background:url('./img/background.png') center center / 100% no-repeat; }
+.hoverbox .screen {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;}
+.hoverbox .screen [class*='hud'] {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);opacity:0;transition:all 1s;}
+.hoverbox .screen [class*='hud'] img {max-width:100%;}
+.hoverbox .screen:hover [class*='hud'] {opacity:1;}
+.hoverbox .screen .hud01 {animation:rolling01 5s linear infinite;width:80%;}
+.hoverbox .screen .hud02 {animation:rolling02 10s infinite alternate;}
+.hoverbox .screen .hud03 {animation:rollandscale 3s infinite;}
+.hoverbox .screen .hud04 {animation:rolling02 6s infinite alternate;}
+ */
+canvas{
+    position:relative;
+    background:#000;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    
+    
+}
+
+
+
+/* rotate 속성으로 1바퀴 돌아가는 키프레임 */
+/* @keyframes rolling01 {
+	0 {transform:translate(-50%,-50%) rotate(0);}
+	100% {transform:translate(-50%,-50%) rotate(360deg);}
+} */
+/* rotate 속성으로 1바퀴 돌아가는데, 초반에는 빠르게 돌다가 천천히 돌아가는 키프레임 */
+/* @keyframes rolling02 {
+	0 {transform:translate(-50%,-50%) rotate(0);}
+	30% {transform:translate(-50%,-50%) rotate(200deg);}
+	100% {transform:translate(-50%,-50%) rotate(360deg);}
+} */
+/* rotate 속성으로 1바퀴 돌리고 중간에 크기도 변화기시키는 키프레임  scale()의 1이 기본값!! 값이 1보다 작으면 크기가 작아지고 1보다 값이 크면 크기가 커짐 */
+/* @keyframes rollandscale {
+	0 {transform:translate(-50%,-50%) rotate(0) scale(1);}
+	35% {transform:translate(-50%,-50%) rotate(360deg) scale(1);}
+	40% {transform:translate(-50%,-50%) rotate(360deg) scale(.5);}
+	60% {transform:translate(-50%,-50%) rotate(0deg) scale(.5);}
+	65% {transform:translate(-50%,-50%) rotate(0deg) scale(1);}
+	100% {transform:translate(-50%,-50%) rotate(360deg)  scale(1);}
+} */
+#section_1{background-color:rgb(255, 255, 255); width:100%; height:969px; }
+#section_1 .container{text-align: center; position:relative; width:100%;}
+#section_1 .container h1{position:absolute; top:40%; left:50%; transform: translate(-50%, -50%); color:#fff; font-size:42px;z-index: 2;}
+#section_1 .container .line{position:absolute; top:45%; left:50%; transform: translate(-50%, -50%); color:#fff; width:70px; height:2px; background-color:#fff;}
+#section_1 .container p{position:absolute; top:55%; left:50%; transform: translate(-50%, -50%); color:#fff; font-size: 18px; z-index: 2;}
+
+#section_2{ width:100%; height:969px;}
+#section_2 .container{}
+#section_2 .container .info_left{float:left; margin-top: 200px; margin-left:100px;}
+#section_2 .container .info_left a{display:block; overflow: hidden; border-radius: 30px 0px 0 0;}
+#section_2 .container .info_left a img{width:300px; height:300px; overflow: hidden; border:0; vertical-align: middle; font-size:0;}
+#section_2 .container .info_left h2{width:300px;font-size:17px; font-weight:300; text-align:center; position:relative; padding:15px 0;}
+#section_2 .container .introduction{display:flex; padding-top:0;width:302px; height:175px;}
+#section_2 .container .introduction ul{ padding:15px 21px;  }
+#section_2 .container .introduction ul>li{font-size:13px; padding:13px 11px; }
+#section_2 .container .introduction ul:nth-child(1) li{font-weight:400;}
+#section_2 .container .info_left:after{content:"29 age"; display:block; font-size:12px; font-weight:300; color:#fff; width:70px; height:30px; background: rgba(51,51,51,0.9); line-height:28px; text-align:center; position:relative; top:-490px; left:-50px;}
+#section_2 .container .info_right{float:right; margin-top:200px; margin-right:100px; text-align: right;}
+#section_2 .container .info_right dl{padding:5px 0;}
+#section_2 .container .info_right dl dt{font-size:20px; font-weight:400; padding-bottom:5px; color:#333333;}
+#section_2 .container .info_right dl dd{padding:2px 0; font-size:15px; font-weight:300; line-height:20px;}
+
+
+
+
+
+
+
+
+
+#section_3 {background: repeating-linear-gradient( to left, rgb(20, 1, 1) , rgb(2, 2, 2)  ); width:100%; height:100vh; padding-top:50px;   }
+#section_3 .title{font-size:40px; text-align: center; color:#333; font-weight:bold;}
+#section_3 .projects{width:100%; max-width:1240px; height: calc(100vh - 9rem); margin:0 auto;  display:grid;   grid-template-columns: 1fr 1fr 1fr; grid-template-rows: auto; grid-gap:50px; margin-top:50px;}
+#section_3 .projects .police{background:rgba(4,38,76,.8);  box-shadow:10px 10px 30px rgb(12, 11, 11); display:flex; flex-direction: row; align-items: center; transition:.2s; width:80%; height:55%; position:relative;  border-radius: 60px 0px;  padding: 0 20px}
+/* #section_3 .projects .police:hover{transition:.2s; box-shadow:0 10px 10px rgb(131, 41, 250);} */
+#section_3 .projects .police a.link{display:grid; width:100%; height:100%; grid-template-rows: 4fr 1fr .6fr 1.2fr 1fr; position:relative;}
+#section_3 .projects .police a.link span.simpleImg{display:flex; width:100%; height:100%;}
+#section_3 .projects .police a.link>h3>img{width:40%; margin-left:40px;}
+#section_3 .projects .police a.link ul.skills{display:flex; align-items: center; flex-direction:row; height: 100px; }
+#section_3 .projects .police a.link ul.skills li{width:100%; height:100%; display:flex; justify-content: center; align-items: center;  flex-direction: column;  height: 100px; }
+#section_3 .projects .police a.link ul.skills li span{display:block; width:30px; height:30px; background-color: lemonchiffon; margin: 0 auto;}
+#section_3 .projects .police a.link ul.skills li span.html{width:100%; height:100%; background: url(../img/html.png) no-repeat center center/35%;}
+#section_3 .projects .police a.link ul.skills li span.css3{width:100%; height:100%; background: url(../img/css.png) no-repeat center center/35%;}
+#section_3 .projects .police a.link ul.skills li span.js{width:100%; height:100%; background: url(../img/js.png) no-repeat center center/35%;}
+#section_3 .projects .police a.link ul.skills li span.jquery{width:100%; height:100%; background: url(../img/jquery.eb105fbb.png) no-repeat center center/35%;}
+#section_3 .projects .police a.link ul.skills li>h4{color:#ddd; font-size:16px; font-weight: bold;}
+
+
+
+
+
+
+#section_3 .projects .police,.box,.yanolja{margin-left:42px; margin-top:110px;}
+#section_3 .projects .box{background:#0f7472; box-shadow:10px 10px 30px rgb(12, 11, 11); display:flex; flex-direction: row; align-items: center; transition:.2s; width:80%; height:55%; border-radius: 60px 0;  padding: 0 20px }
+/* #section_3 .projects .box:hover{transition:.2s; box-shadow:0 10px 10px rgb(251, 255, 8);} */
+#section_3 .projects .box a.link{display:grid; width:100%; height:100%; grid-template-rows: 4fr 1fr .6fr 1.2fr 1fr; position:relative;}
+#section_3 .projects .box a.link span.simpleImg{display:flex; width:100%; height:100%;}
+#section_3 .projects .box a.link>h3>span{margin-left:40px; font-size: 26px; color: #fbff00}
+#section_3 .projects .box a.link ul.skills{display:flex; align-items: center; flex-direction:row;}
+#section_3 .projects .box a.link ul.skills{display:flex; align-items: center; flex-direction:row; height: 100px;}
+#section_3 .projects .box a.link ul.skills li{width:100%; height:100%; display:flex; justify-content: center; align-items: center;  flex-direction: column;  height: 100px}
+#section_3 .projects .box a.link ul.skills li span{display:block; width:30px; height:30px; background-color: lemonchiffon; margin: 0 auto;}
+
+#section_3 .projects .box a.link ul.skills li span.html{width:100%; height:100%; background: url(../img/html.png) no-repeat center center/35%;}
+#section_3 .projects .box a.link ul.skills li span.css3{width:100%; height:100%; background: url(../img/css.png) no-repeat center center/35%;}
+#section_3 .projects .box a.link ul.skills li span.js{width:100%; height:100%; background: url(../img/js.png) no-repeat center center/35%;}
+#section_3 .projects .box a.link ul.skills li span.jquery{width:100%; height:100%; background: url(../img/jquery.eb105fbb.png) no-repeat center center/35%;}
+#section_3 .projects .box a.link ul.skills li>h4{color:#fbff00; font-size:16px; font-weight: bold;}
+
+
+
+#section_3 .projects .yanolja{background:#ddd;  box-shadow:10px 10px 30px rgb(12, 11, 11); display:flex; flex-direction: row; align-items: center; transition:.2s; width:80%; height:55%; position:relative; border-radius: 60px 0; padding: 0 20px}
+/* #section_3 .projects .yanolja:hover{transition:.2s; box-shadow:0 10px 10px rgb(255, 20, 110);} */
+#section_3 .projects .yanolja a.link{display:grid; width:100%; height:100%; grid-template-rows: 4fr 1fr .6fr 1.2fr 1fr; position:relative;}
+#section_3 .projects .yanolja a.link span.simpleImg{display:flex; width:100%; height:100%;}
+#section_3 .projects .yanolja a.link>h3>img{width:40%;margin-left:40px;}
+#section_3 .projects .yanolja a.link ul.skills{display:flex; align-items: center; flex-direction:row;}
+#section_3 .projects .yanolja a.link ul.skills{display:flex; align-items: center; flex-direction:row; height: 100px;}
+#section_3 .projects .yanolja a.link ul.skills li{width:100%; height:100%; display:flex; justify-content: center; align-items: center;  flex-direction: column;  height: 100px;}
+#section_3 .projects .yanolja a.link ul.skills li span{display:block; width:30px; height:30px; background-color: lemonchiffon; margin: 0 auto;}
+#section_3 .projects .yanolja a.link ul.skills li span.html{width:100%; height:100%; background: url(../img/html.png) no-repeat center center/35%;}
+#section_3 .projects .yanolja a.link ul.skills li span.css3{width:100%; height:100%; background: url(../img/css.png) no-repeat center center/35%;}
+#section_3 .projects .yanolja a.link ul.skills li span.js{width:100%; height:100%; background: url(../img/js.png) no-repeat center center/35%;}
+#section_3 .projects .yanolja a.link ul.skills li span.jquery{width:100%; height:100%; background: url(../img/jquery.eb105fbb.png) no-repeat center center/35%;}
+#section_3 .projects .yanolja a.link ul.skills li>h4{color:#ff3478; font-size:16px; font-weight: bold;}
+
+
+
+
+
+
+
